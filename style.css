@@ -1,8 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+--primary-color:rgb(215, 154, 255);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.flex-col {
+  flex-direction: column
 }
 
 ::-webkit-scrollbar {
@@ -13,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   color: #fff;
+  flex-direction: column;
 }
 
 nav {
@@ -26,17 +38,21 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
+  font-weight:500;
 }
 
 .dim {
   opacity: 0.7;
   font-size: 12px;
 }
+
 .links {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .links a {
   text-decoration: none;
   color: #fff;
@@ -68,45 +84,80 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .map-box img {
   height: 130%;
 }
 
 
-.hero-info{
-    /* border: 1px solid lightgreen; */
-    padding-left: 70px;
+.hero-info {
+  /* border: 1px solid lightgreen; */
+  padding-left: 70px;
 }
+
 .h1 {
   color: #fff;
   font-size: 45px;
   text-align: left;
-  padding-bottom: 25px;
 }
 
-.key-points{
-    padding-left:15px;
-    list-style: none;
-    margin-top: 15px;
+.key-points {
+  padding-left: 15px;
+  list-style: none;
+  margin-top: 15px;
 
 }
 
-.key-points li{
-    padding: 8px 0; 
-    display: flex; 
-    align-items: center;
-    gap: 8px;
+.key-points li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.h2{
-    padding: 15px 0;
-    padding-bottom: 8px;
-    margin-top:25px;
+.h2 {
+  padding: 15px 0;
+  padding-bottom: 8px;
+  margin-top: 25px;
+  color:var(--primary-color)
 }
 
 
-.pill{
-    background-color: #333;
-    padding:8px 15px;
-    border-radius:108px;
+.pill {
+  background-color: #222;
+  padding: 8px 15px;
+  border-radius: 108px;
+  border: 0.5px solid #555;
+}
+
+.container {
+  padding: 25px;
+  display: flex;
+  gap:45px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5%;
+  background-color: #111;
+}
+
+.place-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.place-images .image-box {
+  width:20%;
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+
 }
